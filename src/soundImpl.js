@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from './../node_modules/three/src/Three.js';
 import {level } from './main.js';
 
 let sound, listener, audioLoader, audioContext, source, gainNode, echoPosition, previousrandom, footstepAudioLoader, footstepSound, easterEgg;

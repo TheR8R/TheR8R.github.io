@@ -1,5 +1,5 @@
 
-import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
+import { PointerLockControls } from './../node_modules/three/examples/jsm/controls/PointerLockControls.js';
 import  {paused} from './soundImpl.js';
 
 let first = false;

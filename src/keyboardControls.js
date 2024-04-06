@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from './../node_modules/three/src/Three.js';
 import { level } from './main.js';
 import { allowMovement, reloadSound, allowReset, giveUpTutorialSound, triedToGiveUp, nextLevelSound } from './soundImpl.js';
 //DO NOT ONELINE THESE - it will break and make you go fast!

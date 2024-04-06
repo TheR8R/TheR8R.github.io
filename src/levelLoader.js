@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from './../node_modules/three/src/Three.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { nextLevelAudio, youFinishedAudio } from './soundImpl.js';
 
