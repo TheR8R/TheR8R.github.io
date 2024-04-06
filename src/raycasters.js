@@ -1,12 +1,12 @@
-import {Vector3, Raycaster} from './../node_modules/three/src/Three.js';
+import * as THREE from 'three';
 
 let arrowHelpers, raycasters, raycasterToRoof, arrowHelperToRoof, soundRaycasters, leftDistance, rightDistance, frontDistance, backDistance; 
 
 const directions = [
-        new Vector3(-1, 0, 0), // left
-        new Vector3(1, 0, 0), // right
-        new Vector3(0, 0, -1), // front
-        new Vector3(0, 0, 1), // back
+        new THREE.Vector3(-1, 0, 0), // left
+        new THREE.Vector3(1, 0, 0), // right
+        new THREE.Vector3(0, 0, -1), // front
+        new THREE.Vector3(0, 0, 1), // back
     ];
 
 
@@ -19,20 +19,20 @@ export class createRaycasters {
 
     init() {
         raycasters = [];
-        // arrowHelpers = [];
+        arrowHelpers = [];
         soundRaycasters = [];
 
         for(let i = 0; i < directions.length; i++){
-            let raycaster = new Raycaster();
+            let raycaster = new THREE.Raycaster();
             raycaster.set(this.camera.position, directions[i]);
             raycasters.push(raycaster);
     
-            // let arrowHelper = new THREE.ArrowHelper(directions[i], this.camera.position, 7, 0xFF0000);
-            // arrowHelpers.push(arrowHelper);
+            let arrowHelper = new THREE.ArrowHelper(directions[i], this.camera.position, 7, 0xFF0000);
+            arrowHelpers.push(arrowHelper);
         }
         // for sound
         for(let i = 0; i < 3; i++){
-            let raycaster = new Raycaster();
+            let raycaster = new THREE.Raycaster();
             raycaster.set(this.camera.position, this.camera.getWorldDirection);
             soundRaycasters.push(raycaster);
         }

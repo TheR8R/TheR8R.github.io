@@ -1,4 +1,4 @@
-import {AudioListener, Audio, PositionalAudio, AudioLoader} from './../node_modules/three/src/Three.js';
+import * as THREE from 'three';
 import {level } from './main.js';
 
 let sound, listener, audioLoader, audioContext, source, gainNode, echoPosition, previousrandom, footstepAudioLoader, footstepSound, easterEgg;
@@ -15,18 +15,18 @@ export class soundImpl {
     
     init(camera) { 
         // create an AudioListener and add it to the camera
-        listener = new AudioListener();
+        listener = new THREE.AudioListener();
         camera.add( listener );
-        easterEgg = new Audio( listener );
+        easterEgg = new THREE.Audio( listener );
     
 
         // create a global audio source
-        sound = new Audio( listener );
-        footstepSound = new Audio( listener );
-        echoPosition = new PositionalAudio(listener);
+        sound = new THREE.Audio( listener );
+        footstepSound = new THREE.Audio( listener );
+        echoPosition = new THREE.PositionalAudio(listener);
         
         // load a sound and set it as the Audio object's buffer
-        footstepAudioLoader = new AudioLoader();
+        footstepAudioLoader = new THREE.AudioLoader();
         footstepAudioLoader.load( './sound/footsteps/Wood/0.ogg', function( buffer ) {
             footstepSound.setBuffer( buffer );
             footstepSound.setVolume(0.5)
@@ -34,7 +34,7 @@ export class soundImpl {
             // sound.play();
         });
 
-        audioLoader = new AudioLoader();
+        audioLoader = new THREE.AudioLoader();
         audioLoader.load( './sound/tutorial1.mp3', function( buffer ) {
             sound.setBuffer( buffer );
             sound.setVolume(1);
@@ -126,7 +126,7 @@ export class soundImpl {
     }
 
     echoSound(point, name) {
-        echoPosition = new PositionalAudio(listener);
+        echoPosition = new THREE.PositionalAudio(listener);
         let path = './sound/echolocate/0.mp3';
         if (name === "victory") {
             path = './sound/echolocate/1.mp3';
@@ -145,7 +145,7 @@ export class soundImpl {
 
 
     playWinningSound() {
-        let win = new Audio( listener );
+        let win = new THREE.Audio( listener );
         audioLoader.load( './sound/positive.mp3', function( buffer ) {
             win.setBuffer( buffer );
             win.setVolume(0.1);
@@ -154,7 +154,7 @@ export class soundImpl {
     }
 
     playClickTutorial() {
-        let click = new Audio( listener );
+        let click = new THREE.Audio( listener );
         audioLoader.load( './sound/tutorial2.mp3', function( buffer ) {
             click.setBuffer( buffer );
             click.setVolume(1);
@@ -163,7 +163,7 @@ export class soundImpl {
     }
 
     reloadTutorialSound() {
-        let reload = new Audio( listener );
+        let reload = new THREE.Audio( listener );
         audioLoader.load( './sound/tutorial3.mp3', function( buffer ) {
             reload.setBuffer( buffer );
             reload.setVolume(1);
@@ -177,7 +177,7 @@ export class soundImpl {
 }
 
 export function reloadSound() {
-    let reload = new Audio( listener );
+    let reload = new THREE.Audio( listener );
     audioLoader.load( './sound/voice/resetLevel.mp3', function( buffer ) {
         reload.setBuffer( buffer );
         reload.setVolume(1);
@@ -186,7 +186,7 @@ export function reloadSound() {
 }
 
 export function nextLevelSound() {
-    let reload = new Audio( listener );
+    let reload = new THREE.Audio( listener );
     audioLoader.load( './sound/voice/skipLevel.mp3', function( buffer ) {
         reload.setBuffer( buffer );
         reload.setVolume(1);
@@ -195,7 +195,7 @@ export function nextLevelSound() {
 }
 
 export function paused(variation) {
-    let pause = new Audio( listener );
+    let pause = new THREE.Audio( listener );
     let path;
     if(variation === 0) {
         path = './sound/menu/clickToPlay.mp3';
@@ -233,12 +233,12 @@ export function triedToGiveUp() {
 }
 
 export function giveUpTutorialSound() {
-    let giveUp = new Audio( listener );
+    let giveUp = new THREE.Audio( listener );
     audioLoader.load( './sound/tutorial4.mp3', function( buffer ) {
         giveUp.setBuffer( buffer );
         giveUp.setVolume(1);
         giveUp.onEnded = function() {
-            nextLevelAudio = new PositionalAudio(listener);
+            nextLevelAudio = new THREE.PositionalAudio(listener);
             audioLoader.load( './sound/portalRadio2.mp3', function( buffer ) {
                 nextLevelAudio.setBuffer( buffer );
                 nextLevelAudio.setRefDistance(15);
@@ -257,7 +257,7 @@ export function giveUpTutorialSound() {
 }
 
 export function youFinishedAudio() {
-    let finish = new Audio( listener );
+    let finish = new THREE.Audio( listener );
     audioLoader.load( './sound/voice/completedTheTrial.mp3', function( buffer ) {
         finish.setBuffer( buffer );
         finish.setVolume(1);

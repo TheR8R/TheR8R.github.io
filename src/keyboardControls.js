@@ -1,4 +1,4 @@
-import {Vector3} from './../node_modules/three/src/Three.js';
+import * as THREE from 'three';
 import { level } from './main.js';
 import { allowMovement, reloadSound, allowReset, giveUpTutorialSound, triedToGiveUp, nextLevelSound } from './soundImpl.js';
 //DO NOT ONELINE THESE - it will break and make you go fast!
@@ -9,8 +9,8 @@ let moveRight = false;
 let giveUpTutorial = true;
 export let isMoving = false;
 export let click = false;
-const velocity = new Vector3();
-const direction = new Vector3();
+const velocity = new THREE.Vector3();
+const direction = new THREE.Vector3();
 
 export function onKeyDown ( event) {
     if(allowMovement === true){

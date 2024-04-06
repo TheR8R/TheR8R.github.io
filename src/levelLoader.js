@@ -1,5 +1,5 @@
-import {BoxGeometry, MeshBasicMaterial, Mesh,Vector3, Box3} from './../node_modules/three/src/Three.js';
-import { GLTFLoader } from './../node_modules/three/examples/jsm/loaders/GLTFLoader.js';	
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { nextLevelAudio, youFinishedAudio } from './soundImpl.js';
 
 let currentLevel;
@@ -199,72 +199,72 @@ export class loadLevel {
             if(cube !== null){
                 this.scene.remove(cube);
             }
-            let geometry = new BoxGeometry( 10, 33, 10 );
-            let material = new MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
-            cube = new Mesh( geometry, material );
+            let geometry = new THREE.BoxGeometry( 10, 33, 10 );
+            let material = new THREE.MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
+            cube = new THREE.Mesh( geometry, material );
             cube.position.set(50, 0, 50);
             cube.name = "victory";
-            let cubeBB = new Box3(new Vector3(), new Vector3());
+            let cubeBB = new THREE.Box3(new THREE.Vector3(), new THREE.Vector3());
             cubeBB.setFromObject(cube);
             this.scene.add( cube );
             return cubeBB;
         }
         if(levelNumber === 1){
             this.scene.remove(cube);
-            let geometry = new BoxGeometry( 13, 33, 5 );
-            let material = new MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
-            cube = new Mesh( geometry, material );
+            let geometry = new THREE.BoxGeometry( 13, 33, 5 );
+            let material = new THREE.MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
+            cube = new THREE.Mesh( geometry, material );
             cube.position.set(0, 0, -80);
             cube.name = "victory";
-            let cubeBB = new Box3(new Vector3(), new Vector3());
+            let cubeBB = new THREE.Box3(new THREE.Vector3(), new THREE.Vector3());
             cubeBB.setFromObject(cube);
             this.scene.add( cube );
             return cubeBB;
         }
         if(levelNumber === 2){
             this.scene.remove(cube);
-            let geometry = new BoxGeometry( 13, 35, 13 );
-            let material = new MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
-            cube = new Mesh( geometry, material );
+            let geometry = new THREE.BoxGeometry( 13, 35, 13 );
+            let material = new THREE.MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
+            cube = new THREE.Mesh( geometry, material );
             cube.position.set(55, 0, -13);
             cube.name = "victory";
-            let cubeBB = new Box3(new Vector3(), new Vector3());
+            let cubeBB = new THREE.Box3(new THREE.Vector3(), new THREE.Vector3());
             cubeBB.setFromObject(cube);
             this.scene.add( cube );
             return cubeBB;
         }
         if(levelNumber === 3){
             this.scene.remove(cube);
-            let geometry = new BoxGeometry( 25, 35, 17 );
-            let material = new MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
-            cube = new Mesh( geometry, material );
+            let geometry = new THREE.BoxGeometry( 25, 35, 17 );
+            let material = new THREE.MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
+            cube = new THREE.Mesh( geometry, material );
             cube.position.set(0, 0, 75);
             cube.name = "victory";
-            let cubeBB = new Box3(new Vector3(), new Vector3());
+            let cubeBB = new THREE.Box3(new THREE.Vector3(), new THREE.Vector3());
             cubeBB.setFromObject(cube);
             this.scene.add( cube );
             return cubeBB;
         }
         if(levelNumber === 4){
             this.scene.remove(cube);
-            let geometry = new BoxGeometry( 12, 35, 2 );
-            let material = new MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
-            cube = new Mesh( geometry, material );
+            let geometry = new THREE.BoxGeometry( 12, 35, 2 );
+            let material = new THREE.MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
+            cube = new THREE.Mesh( geometry, material );
             cube.position.set(84 , 0, -40);
             cube.name = "victory";
-            let cubeBB = new Box3(new Vector3(), new Vector3());
+            let cubeBB = new THREE.Box3(new THREE.Vector3(), new THREE.Vector3());
             cubeBB.setFromObject(cube);
             this.scene.add( cube );
             return cubeBB;
         }
         if(levelNumber === 5){
             this.scene.remove(cube);
-            let geometry = new BoxGeometry( 2, 35, 18 );
-            let material = new MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
-            cube = new Mesh( geometry, material );
+            let geometry = new THREE.BoxGeometry( 2, 35, 18 );
+            let material = new THREE.MeshBasicMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5} );
+            cube = new THREE.Mesh( geometry, material );
             cube.position.set(-13 , 0, -12);
             cube.name = "victory";
-            let cubeBB = new Box3(new Vector3(), new Vector3());
+            let cubeBB = new THREE.Box3(new THREE.Vector3(), new THREE.Vector3());
             cubeBB.setFromObject(cube);
             this.scene.add( cube );
             return cubeBB;

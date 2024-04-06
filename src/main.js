@@ -1,4 +1,4 @@
-import {Scene, HemisphereLight, WebGLRenderer} from './../node_modules/three/src/Three.js';
+import * as THREE from 'three';
 
 import { movement} from './keyboardControls';
 import { loadLevel } from './levelLoader.js';
@@ -16,7 +16,7 @@ animate();
 function init() {
 
     //create scene
-    scene = new Scene();
+    scene = new THREE.Scene();
     // scene.background = new THREE.Color( 0xffffff );
     // scene.fog = new THREE.Fog( 0xffffff, 0, 750 );
 
@@ -24,7 +24,7 @@ function init() {
     level = new loadLevel(scene, player);
  
     //add light REMOVE LATER
-    const light = new HemisphereLight( 0xeeeeff, 0x777788, 2.5 );
+    const light = new THREE.HemisphereLight( 0xeeeeff, 0x777788, 2.5 );
     light.position.set( 0.5, 1, 0.75 );
     scene.add( light );
 
@@ -47,7 +47,7 @@ function init() {
     raycasters = player.getRaycasters();
 
     //create renderer
-    renderer = new WebGLRenderer( { antialias: true } );
+    renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
