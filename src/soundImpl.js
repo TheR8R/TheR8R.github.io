@@ -178,7 +178,7 @@ export class soundImpl {
 
 export function reloadSound() {
     let reload = new THREE.Audio( listener );
-    audioLoader.load( './sound/Voice/resetLevel.mp3', function( buffer ) {
+    audioLoader.load( './sound/voice/resetLevel.mp3', function( buffer ) {
         reload.setBuffer( buffer );
         reload.setVolume(1);
         reload.play();
@@ -187,7 +187,7 @@ export function reloadSound() {
 
 export function nextLevelSound() {
     let reload = new THREE.Audio( listener );
-    audioLoader.load( './sound/Voice/skiplevel.mp3', function( buffer ) {
+    audioLoader.load( './sound/voice/skipLevel.mp3', function( buffer ) {
         reload.setBuffer( buffer );
         reload.setVolume(1);
         reload.play();
@@ -216,13 +216,13 @@ export function triedToGiveUp() {
     if(!easterEgg.isPlaying){
         let path;
         if(triesToGiveUp === 0) {
-            path = './sound/Voice/E1.mp3';
+            path = './sound/voice/E1.mp3';
             triesToGiveUp += 1;
         } else if(triesToGiveUp === 1) {
-            path = './sound/Voice/E2.mp3';
+            path = './sound/voice/E2.mp3';
             triesToGiveUp += 1;
         } else {
-            path = './sound/Voice/E3.mp3';
+            path = './sound/voice/E3.mp3';
         }
         audioLoader.load( path, function( buffer ) {
             easterEgg.setBuffer( buffer );
@@ -239,7 +239,7 @@ export function giveUpTutorialSound() {
         giveUp.setVolume(1);
         giveUp.onEnded = function() {
             nextLevelAudio = new THREE.PositionalAudio(listener);
-            audioLoader.load( './sound/portalRadio2.mp3', function( buffer ) {
+            audioLoader.load( './sound/portalRadio.mp3', function( buffer ) {
                 nextLevelAudio.setBuffer( buffer );
                 nextLevelAudio.setRefDistance(15);
                 nextLevelAudio.setRolloffFactor(2.5);
@@ -258,7 +258,7 @@ export function giveUpTutorialSound() {
 
 export function youFinishedAudio() {
     let finish = new THREE.Audio( listener );
-    audioLoader.load( './sound/Voice/completedTheTrial.mp3', function( buffer ) {
+    audioLoader.load( './sound/voice/completedTheTrial.mp3', function( buffer ) {
         finish.setBuffer( buffer );
         finish.setVolume(1);
         finish.play();
