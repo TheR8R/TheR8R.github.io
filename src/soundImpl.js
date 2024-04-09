@@ -187,7 +187,7 @@ export function reloadSound() {
 
 export function nextLevelSound() {
     let reload = new THREE.Audio( listener );
-    audioLoader.load( './sound/Voice/skipLevel.mp3', function( buffer ) {
+    audioLoader.load( './sound/Voice/skiplevel.mp3', function( buffer ) {
         reload.setBuffer( buffer );
         reload.setVolume(1);
         reload.play();
