@@ -27,7 +27,7 @@ export class soundImpl {
         
         // load a sound and set it as the Audio object's buffer
         footstepAudioLoader = new THREE.AudioLoader();
-        footstepAudioLoader.load( './sound/footsteps/Wood/0.ogg', function( buffer ) {
+        footstepAudioLoader.load( './sound/footsteps/wood/0.ogg', function( buffer ) {
             footstepSound.setBuffer( buffer );
             footstepSound.setVolume(0.5)
             footstepSound.playbackRate = 0.6;
@@ -35,7 +35,7 @@ export class soundImpl {
         });
 
         audioLoader = new THREE.AudioLoader();
-        audioLoader.load( './sound/tutorial1.mp3', function( buffer ) {
+        audioLoader.load( './sound/voice/1.mp3', function( buffer ) {
             sound.setBuffer( buffer );
             sound.setVolume(1);
             sound.playbackRate = 1;
@@ -58,7 +58,7 @@ export class soundImpl {
         random += 1;
         previousrandom = random;
         console.log(random);
-        let path = './sound/footsteps/Wood/' + random + '.ogg';
+        let path = './sound/footsteps/wood/' + random + '.ogg';
         footstepAudioLoader.load( path, function( buffer ) {
             footstepSound.setBuffer( buffer );
             footstepSound.play();
@@ -155,7 +155,7 @@ export class soundImpl {
 
     playClickTutorial() {
         let click = new THREE.Audio( listener );
-        audioLoader.load( './sound/tutorial2.mp3', function( buffer ) {
+        audioLoader.load( './sound/voice/2.mp3', function( buffer ) {
             click.setBuffer( buffer );
             click.setVolume(1);
             click.play();
@@ -164,7 +164,7 @@ export class soundImpl {
 
     reloadTutorialSound() {
         let reload = new THREE.Audio( listener );
-        audioLoader.load( './sound/tutorial3.mp3', function( buffer ) {
+        audioLoader.load( './sound/voice/3.mp3', function( buffer ) {
             reload.setBuffer( buffer );
             reload.setVolume(1);
             reload.onEnded = function() {
@@ -234,7 +234,7 @@ export function triedToGiveUp() {
 
 export function giveUpTutorialSound() {
     let giveUp = new THREE.Audio( listener );
-    audioLoader.load( './sound/tutorial4.mp3', function( buffer ) {
+    audioLoader.load( './sound/voice/4.mp3', function( buffer ) {
         giveUp.setBuffer( buffer );
         giveUp.setVolume(1);
         giveUp.onEnded = function() {
