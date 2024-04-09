@@ -1,16 +1,9 @@
 import * as THREE from 'three';
 
-<<<<<<< HEAD
-import { movement} from './keyboardControls.js';
-import { loadLevel } from './levelLoader.js';
-import { playerClass } from './player.js';
-import { checkForCollision } from './collision.js';
-=======
 import { loadLevel } from './levelLoader.js';
 import { playerClass } from './player.js';
 import { checkForCollision } from './Collision.js';
 import { movement} from './keyboardControls.js';
->>>>>>> 3e88aeaa4a91222019c8b799ac50e19775947a98
 import  {paused} from './soundImpl.js';
 
 let camera, scene, renderer, controls, raycasters, player;
