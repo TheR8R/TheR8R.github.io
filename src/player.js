@@ -1,9 +1,9 @@
 import * as THREE from 'three';
 
-import { onKeyDown, onKeyUp, isMoving, click } from './keyboardControls';
-import { pointerControls } from './pointerControls';
-import { soundImpl, } from './soundImpl';
-import { createRaycasters} from './raycasters';
+import { onKeyDown, onKeyUp, isMoving, click } from './keyboardControls.js';
+import { pointerControls } from './pointerControls.js';
+import { soundImpl, } from './soundImpl.js';
+import { createRaycasters} from './raycasters.js';
 import { level } from './main.js';
 
 let camera;
