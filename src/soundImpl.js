@@ -43,7 +43,7 @@ export class soundImpl {
         });
 
         audioLoader = new THREE.AudioLoader();
-        audioLoader.load( './sound/tutorial1.mp3', function( buffer ) {
+        audioLoader.load( './sound/voice/1.mp3', function( buffer ) {
             tutorialSound.setBuffer( buffer );
             tutorialSound.setVolume(1);
             tutorialSound.playbackRate = 1;
@@ -158,7 +158,7 @@ export class soundImpl {
     }
 
     playClickTutorial() {
-        audioLoader.load( './sound/tutorial2.mp3', function( buffer ) {
+        audioLoader.load( './sound/voice/2.mp3', function( buffer ) {
             tutorialSound.setBuffer( buffer );
             tutorialSound.setVolume(1);
             tutorialSound.onEnded = function() {
@@ -171,7 +171,7 @@ export class soundImpl {
     }
 
     reloadTutorialSound() {
-        audioLoader.load( './sound/tutorial3.mp3', function( buffer ) {
+        audioLoader.load( './sound/voice/3.mp3', function( buffer ) {
             tutorialSound.setBuffer( buffer );
             tutorialSound.setVolume(1);
             tutorialSound.onEnded = function() {
@@ -273,7 +273,7 @@ export function triedToGiveUp() {
 }
 
 export function giveUpTutorialSound() {
-    audioLoader.load( './sound/tutorial4.mp3', function( buffer ) {
+    audioLoader.load( './sound/voice/4.mp3', function( buffer ) {
         tutorialSound.setBuffer( buffer );
         tutorialSound.setVolume(1);
         tutorialSound.onEnded = function() {
