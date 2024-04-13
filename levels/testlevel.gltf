@@ -1,0 +1,259 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "THREE.GLTFExporter"
+  },
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0,
+        3
+      ]
+    }
+  ],
+  "scene": 0,
+  "nodes": [
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        8.27879956221894,
+        0,
+        1
+      ],
+      "name": "AmbientLight"
+    },
+    {
+      "matrix": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        -0.0000013435885648505064,
+        -10.000001343588565,
+        0,
+        0,
+        10.000001343588565,
+        -0.0000013435885648505064,
+        0,
+        0,
+        4.52398681640625,
+        -433.6970520019531,
+        1
+      ],
+      "name": "testinglevel",
+      "extras": {
+        "name": "testinglevel"
+      },
+      "mesh": 0
+    },
+    {
+      "matrix": [
+        0.0010000000474974513,
+        0,
+        0,
+        0,
+        0,
+        -1.3435886286675388e-10,
+        0.001000000181856314,
+        0,
+        0,
+        -0.001000000181856314,
+        -1.3435886286675388e-10,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "TestBox_v2",
+      "extras": {
+        "name": "TestBox v2"
+      },
+      "children": [
+        1
+      ]
+    },
+    {
+      "matrix": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "testinglevel.gltf",
+      "children": [
+        2
+      ]
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 720,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 720,
+      "byteLength": 720,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1440,
+      "byteLength": 480,
+      "target": 34962,
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1920,
+      "byteLength": 288,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2208,
+      "uri": "data:application/octet-stream;base64,AADIwgAANEIAAMhCAADIwgAANEIAAMhCAADIwgAANEIAAMhCAADIQgAANEIAAMhCAADIQgAANEIAAMhCAADIQgAANEIAAMhCAADIQgAANEIAAMjCAADIQgAANEIAAMjCAADIQgAANEIAAMjCAADIwgAANEIAAMjCAADIwgAANEIAAMjCAADIwgAANEIAAMjCAAAAAAAANEIAAACAAADIQgAANMIAAMhCAADIQgAANMIAAMhCAADIQgAANMIAAMhCAADIwgAANMIAAMhCAADIwgAANMIAAMhCAADIwgAANMIAAMhCAADIwgAANMIAAMjCAADIwgAANMIAAMjCAADIwgAANMIAAMjCAADIQgAANMIAAMjCAADIQgAANMIAAMjCAADIQgAANMIAAMjCAAAAAAAANMIAAACAAADIwrZt27UAAACAAAAAALZt27UAAMjCAADIQrZt27UAAACAAAAAALZt27UAAMhCAADEQgAAIMIAAMRCAADEQgAAIMIAAMRCAADEQgAAIMIAAMRCAADEQgAAIMIAAMTCAADEQgAAIMIAAMTCAADEQgAAIMIAAMTCAADEwgAAIMIAAMTCAADEwgAAIMIAAMTCAADEwgAAIMIAAMTCAADEwgAAIMIAAMRCAADEwgAAIMIAAMRCAADEwgAAIMIAAMRCAAAAAAAAIMIAAACAAADEQgAAIEIAAMRCAADEQgAAIEIAAMRCAADEQgAAIEIAAMRCAADEQgAAIEIAAMTCAADEQgAAIEIAAMTCAADEQgAAIEIAAMTCAADEQrZt27UAAACAAADEwgAAIEIAAMTCAADEwgAAIEIAAMTCAADEwgAAIEIAAMTCAAAAALZt27UAAMTCAADEwgAAIEIAAMRCAADEwgAAIEIAAMRCAADEwgAAIEIAAMRCAAAAALZt27UAAMRCAADEwrZt27UAAACAAAAAAAAAIEIAAACAAACAvwAAAAAAAACAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAACAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAACAAACAPwAAAAAAAACAAAAAAAAAAAAAAIC/AAAAAAAAgD8AAACAAACAPwAAAAAAAACAAACAvwAAAAAAAACAAAAAAAAAAAAAAIC/AAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/AACAPwAAAAAAAACAAACAvwAAAAAAAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/AACAvwAAAAAAAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIC/AAAAAAAAgL8AAACAAAAAAAAAAAAAAIC/AACAPwAAAAAAAACAAAAAAAAAgL8AAACAAACAvwAAAAAAAACAAAAAAAAAAAAAAIC/AACAPwAAAAAAAACAAAAAAAAAAAAAAIA/AACAvwAAAAAAAACAAAAAAAAAAAAAAIC/AAAAAAAAgD8AAACAAACAvwAAAAAAAACAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAACAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAACAAACAPwAAAAAAAACAAAAAAAAAAAAAAIC/AAAAAAAAgD8AAACAAACAPwAAAAAAAACAAAAAAAAAgD8AAACAAACAvwAAAAAAAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIC/AACAvwAAAAAAAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/AACAvwAAAAAAAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/AACAPwAAAAAAAACAAAAAAAAAAAAAAIA/AAAAAAAAgL8AAACAAAAAAAAAAAAAAIC/AACAPwAAAAAAAACAAAAAAAAAAAAAAIC/AACAPwAAAAAAAACAAAAAAAAAgL8AAACAAAA0wgAAxsIAADTCAADKQgAAyEIAAMpCAAA0wgAAxsIAAMhCAADGwgAANEIAAMbCAAA0QgAAxsIAAMjCAADGwgAANEIAAMpCAAA0wgAAykIAADRCAADKQgAAyMIAAMpCAAAAAAAAgD8AAMjCAADGwgAANEIAAMbCAAA0wgAAxsIAADRCAADGwgAAyMIAAMpCAAA0QgAAykIAADRCAADKQgAAyEIAAMpCAAA0wgAAykIAAMhCAADGwgAANMIAAMbCAAA0wgAAykIAAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AABEwwAAqMIACKynAACowgAAxEIAAMZCAAispwAAqMIAAETDAACowgAAxEIAAMLCAAispwAAqMIAAMTCAADCwgAARMMAAKjCAABEwwAAqMIAAMTCAADGQgAIrKcAAKjCAAAAAAAAgD8AAETDAACAwAAAxEIAAMLCAAispwAAgMAACKynAACAwAAAxEIAAMZCAABEwwAAgMAAAMTCAAAwwgAAxMIAAMZCAAispwAAgMAAAETDAACAwAAAxMIAADDCAADEwgAAwsIAAETDAACAwAAIrKcAAIDAAADEwgAAMMIAAMTCAAAwwgAAAAAAAIA/CwACAAwADAACAAQADAAEAAcABwALAAwAFgANABkAGQANABEAGQARABQAFAAWABkAAAAJABoAGgAJABMAGgATABAAEAAAABoACgAGABsAGwAGABcAGwAXABUAFQAKABsACAAFABwAHAAFAA8AHAAPABgAGAAIABwAAwABAB0AHQABABIAHQASAA4ADgADAB0AKAAgACoAKgAgACMAKgAjACUAJQAoACoAHgArADEAMQArAC4AMQAuACEAIQAeADEAIgAwADUANQAwADMANQAzACQAJAAiADUAJwA3ADkAOQA3AC0AOQAtAB8AHwAnADkAJgA0ADoAOgA0ADgAOgA4ACkAKQAmADoALwAsADsAOwAsADYAOwA2ADIAMgAvADsA"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 60,
+      "max": [
+        100,
+        45,
+        100
+      ],
+      "min": [
+        -100,
+        -45,
+        -100
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 60,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 60,
+      "max": [
+        100,
+        101
+      ],
+      "min": [
+        -196,
+        -99
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 144,
+      "max": [
+        59
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.6274510025978088,
+          0.6274510025978088,
+          0.6274510025978088,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.5527864098548889
+      },
+      "doubleSided": true,
+      "name": "Steel - Satin",
+      "extensions": {
+        "KHR_materials_ior": {
+          "ior": 1.4500000476837158
+        },
+        "KHR_materials_specular": {
+          "specularFactor": 1,
+          "specularColorFactor": [
+            2.371357614441398,
+            2.371357614441398,
+            2.371357614441398
+          ]
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "mode": 4,
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_ior",
+    "KHR_materials_specular"
+  ]
+}
