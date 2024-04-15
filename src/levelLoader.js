@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { nextLevelAudio, youFinishedAudio, stopTutorialAudio } from './soundImpl.js';
+import { nextLevelAudio, youFinishedAudio, stopTutorialAudio, stopEasterEgg } from './soundImpl.js';
 
 let currentLevel;
 let root = null;
@@ -47,6 +47,7 @@ export class loadLevel {
     }
     
     level1(scene) {
+        stopEasterEgg();
         stopTutorialAudio();
         nextLevelAudio.stop();
         this.leftTestingLevel = true;

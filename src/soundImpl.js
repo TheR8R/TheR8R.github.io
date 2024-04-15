@@ -155,9 +155,9 @@ export class soundImpl {
             sound.setBuffer( buffer );
             sound.setVolume(0.1);
             sound.onEnded = function() {
-                sound.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
                 sound.stop();
                 playLevelSound();
+                sound.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
             }
             sound.stop(); // stop the sound if it is playing
             sound.play(); // play the sound
@@ -170,9 +170,9 @@ export class soundImpl {
             tutorialSound.setBuffer( buffer );
             tutorialSound.setVolume(1);
             tutorialSound.onEnded = function() {
-                tutorialSound.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
                 allowClick = true;
                 tutorialSound.stop();
+                tutorialSound.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
             };
         tutorialSound.stop(); // stop the sound if it is playing
         tutorialSound.play(); // play the sound
@@ -184,9 +184,9 @@ export class soundImpl {
             tutorialSound.setBuffer( buffer );
             tutorialSound.setVolume(1);
             tutorialSound.onEnded = function() {
-                tutorialSound.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
                 allowReset = true;
                 tutorialSound.stop();
+                tutorialSound.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
             };
             tutorialSound.stop(); // stop the sound if it is playing
             tutorialSound.play(); // play the sound
@@ -200,8 +200,8 @@ export function reloadSound() {
         sound.setBuffer( buffer );
         sound.setVolume(1);
         sound.onEnded = function() {
-            sound.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
             sound.stop();
+            sound.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
         }
         sound.stop(); // stop the sound if it is playing
         sound.play(); // play the sound
@@ -213,8 +213,8 @@ export function nextLevelSound() {
         sound.setBuffer( buffer );
         sound.setVolume(1);
         sound.onEnded = function() {
-            sound.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
             sound.stop();
+            sound.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
             playLevelSound();
         }
         sound.stop(); // stop the sound if it is playing
@@ -283,6 +283,7 @@ export function triedToGiveUp() {
             easterEgg.setVolume(1);
             easterEgg.onEnded = function() {
                 easterEgg.stop();
+                easterEgg.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
             }
             easterEgg.play();
         });
@@ -322,6 +323,12 @@ export function stopTutorialAudio() {
         tutorialSound.setLoop(false);
         tutorialSound.stop();
         tutorialSound.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
+}
+
+export function stopEasterEgg() {
+    if(easterEgg.isPlaying === true)
+        easterEgg.stop();
+        easterEgg.setBuffer( null); // clear the buffer so it doesn't play again when unpausing
 }
 
 function tutorialLoop() {
