@@ -239,7 +239,7 @@ export function paused(variation) {
         if(easterEgg.isPlaying){
             easterEgg.pause();
         }
-        if(tutorialSound.isPlaying){
+        if(tutorialSound.isPlaying || tutorialSound.buffer !== null){
             tutorialSound.pause();
         }
     }
