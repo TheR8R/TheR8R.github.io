@@ -1,60 +1,30 @@
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Echolocation simulation</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link type="text/css" rel="stylesheet" href="base.css">
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@v0.163.0/build/three.module.js",
-          "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.163.0/examples/jsm/"
-        }
-      }
-    </script>
-    </head>
-    <body>
-      <div id="blocker">
-        <div id="instructions">
-          <p id="pauseText">
-            Paused
-          </p>
-          <p id="instructionsText">
-            If you are using a screen reader either NVDA or JAWS do the following to have access to the simulation controls:
-            If you are using NVDA turn focus mode on, by pressing the NVDA key + space bar.
-            If you are using JAWS untoggle the virtual cursor by pressing the JAWS key + Z and then use the W, A, S and D keys to move around.
-            Also to skip a level use the JAWS key + backspace.
-            If you use W, A, S and D to move, then for the best hearing experience turn off "speak typed character" as well. 
-            When you are ready click the play button to start the simulation.
-          <p> 
-           
-            <button id="play" type="button">click to play</button>
-            <br>
-            <button id="help" type="button">Help</button>
-            <br>
-            <button id="questionnaire" type="button">Link to Questionnaire</button>
-          </p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <button class="toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <span class="icon">☀️</span>
+  </button>
 
-        </div>
-        <div id="helpDiv">
-          <p>
-            <button id="reset" type="button">How to reset the level</button>
-            <br>
-            <button id="skip" type="button">How to skip the level</button>
-            <br>
-            <button id="echo" type="button">How to use echolocation</button>
-            <br>
-            <button id="movement" type="button">How to move around</button>
-            <br>
-            <button id="compass" type="button">What is that ticking noise?</button>
-            <br>
-            <button id="back" type="button">Go back to main menu</button>
-          </p>
+  <h1>Projects</h1>
+  
+  <div class="projects">
+    <a href="/Echolocation-Demo" class="project">
+      <h2>Echolocation Demo <span class="arrow">→</span></h2>
+      <p>Interactive demonstration of echolocation research</p>
+    </a>
+    
+    <a href="/Indbrud-Oestjylland" class="project">
+      <h2>Østjylland Break-ins <span class="arrow">→</span></h2>
+      <p>Interactive map displaying break-in data across Østjylland</p>
+    </a>
+  </div>
 
-        </div>
-
-      </div>
-      <script type="module" src="src/main.js" role="application"></script>
-    </body>
+  <script src="script.js"></script>
+</body>
 </html>
-
